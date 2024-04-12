@@ -1,4 +1,10 @@
 function Menu() {
+  const currentCategory = "Breakfast";
+  const categories = [
+    ["Breakfast", "Lunch", "Filling Options", "Extras", "Sides"],
+    ["Coffee", "Specialty Drinks", "Aqua Frescas", "Extras"],
+  ];
+
   return (
     <div className="text-2xl py-8 px-16 flex flex-row">
       <div className="w-1/5 flex flex-col gap-8">
@@ -21,19 +27,13 @@ function Menu() {
         </div>
 
         <div className="flex flex-col gap-4">
-          <div>
-            <Category text="Breakfast" />
-            <Category text="Lunch" />
-            <Category text="Filling Options" />
-            <Category text="Extras" />
-            <Category text="Sides" />
-          </div>
-          <div>
-            <Category text="Coffee" />
-            <Category text="Specialty Drinks" />
-            <Category text="Aqua Frescas" />
-            <Category text="Extras" />
-          </div>
+          {categories.map((section) => (
+            <div>
+              {section.map((item) => (
+                <Category text={item} current={item === currentCategory} />
+              ))}
+            </div>
+          ))}
         </div>
 
         <div>
@@ -89,8 +89,13 @@ function Header({ text }) {
   return <h3 className="font-semibold">{text}</h3>;
 }
 
-function Category({ text }) {
-  return <p className="font-medium">{text}</p>;
+function Category({ text, current = false }) {
+  return (
+    <div className="flex flex-row">
+      <div className={"w-2 " + (current ? "bg-red" : "")}></div>
+      <p className="font-medium pl-4">{text}</p>
+    </div>
+  );
 }
 
 function Option({ text }) {
@@ -121,9 +126,9 @@ function PlaceholderIcon() {
   );
 }
 
-function MenuItem() {
+function MenuItem({ current = false }) {
   return (
-    <div className="flex flex-row flex-1 gap-6 p-8 shadow rounded-lg">
+    <div className={"flex flex-row flex-1 gap-6 p-8 shadow rounded-lg"}>
       <div className="w-40 h-40 shrink-0 border-4 border-black"></div>
       <div className="flex flex-col gap-2">
         <div className="flex flex-row justify-between items-center">
