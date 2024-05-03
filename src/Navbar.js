@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   return (
     <>
@@ -8,9 +10,7 @@ function Navbar() {
             <div className="text-3xl text-white">Cafetal Quilombo Cafe</div>
           </div>
           <div className="px-[40px] py-[20px] flex items-center space-x-10">
-            <div className="text-white">About Us</div>
-            <div className="text-white">Menu</div>
-            <div className="text-white">Catering</div>
+            <Link to="/Test" className="text-white">Test</Link>
           </div>
         </div>
       </div>
