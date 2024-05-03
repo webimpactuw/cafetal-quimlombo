@@ -10,7 +10,7 @@ module.exports = {
       "gray-primary": "#2C2C2C",
       "gray-secondary": "#4E4E4E",
       "gray-tertiary": "#898989",
-      "menu-background": "#FBF5E3",
+      "menu-background": "#fff",
     },
   },
   plugins: [],

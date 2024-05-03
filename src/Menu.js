@@ -1,11 +1,5 @@
 import "./App.css";
 
-const currentCategory = "Breakfast";
-const categories = {
-  Food: ["Breakfast", "Lunch", "Add-Ons", "Sides"],
-  Drinks: ["Coffee", "Specialty Drinks", "Aguas Frescas", "Extras"],
-};
-
 const menu = {
   Breakfast: [
     {
@@ -110,6 +104,63 @@ const menu = {
       item: "Tamales",
       description: "Corn husks containing steamed dough with various fillings",
       price: 3.5,
+      subitems: [
+        {
+          item: "Chicken",
+          description: "Choice of red, green, or mole sauce",
+          color: "bg-[#FAC6AF]",
+        },
+        {
+          item: "Pork",
+          description: "Choice of red or green salsa",
+          color: "bg-[#B36E3C]",
+        },
+        {
+          item: "Chorizo",
+          description: "Choice of beans or cheese",
+          color: "bg-[#70351B]",
+        },
+        {
+          item: "Rajas con queso",
+          description: "Roasted poblano strips with cheese",
+          color: "bg-[#489734]",
+        },
+        {
+          item: "Beans and cheese",
+          description: "",
+          color: "bg-[#B95D1A]",
+        },
+        {
+          item: "Sweet corn",
+          description: "",
+          color: "bg-[#E8C50B]",
+        },
+        {
+          item: "Vegetables",
+          description: "",
+          color: "bg-[#20691F]",
+        },
+        {
+          item: "Nopales",
+          description: "Sliced cactus leaves",
+          color: "bg-[#45A53C]",
+        },
+        {
+          item: "Chipotle",
+          description: "Smoked chile peper",
+          color: "bg-[#DA0D0D]",
+        },
+        {
+          item: "Black beans",
+          description: "",
+          color: "bg-[#282121]",
+        },
+        {
+          item: "Chipilín",
+          description: "Central American greens",
+          color: "bg-[#419D21]",
+        },
+      ],
     },
     {
       item: "Tamale plate",
@@ -348,16 +399,50 @@ const menu = {
       price: 3.25,
     },
   ],
+  "Aguas Frescas": [
+    {
+      item: "Agua de Jamaica",
+      description: "",
+      price: 3.25,
+    },
+    {
+      item: "Chia Lemonade",
+      description: "",
+      price: 3.25,
+    },
+    {
+      item: "Horchata",
+      description: "",
+      price: 3.25,
+    },
+  ],
 };
-const menuItemsPerLine = {
-  Breakfast: 1,
-  Lunch: 1,
-  Starters: 1,
-  "Filling Options": 1,
-  Extras: 3,
-  Sides: 3,
-  Coffee: 4,
-  "Specialty Drinks": 4,
+const menuItemStyles = {
+  Breakfast: "grid-cols-1",
+  Lunch: "grid-cols-1",
+  Starters: "grid-cols-1",
+  "Filling Options": "grid-cols-1",
+  Extras: "grid-cols-3",
+  Sides: "grid-cols-3",
+  Coffee: "grid-cols-3",
+  "Specialty Drinks": "grid-cols-3",
+  "Aguas Frescas": "grid-cols-3",
+};
+
+const currentCategory = "";
+const categories = {
+  Food: [
+    "Breakfast",
+    "Lunch",
+    "Starters",
+    "Filling Options",
+    "Extras",
+    "Sides",
+  ],
+  Drinks: ["Coffee", "Specialty Drinks", "Aguas Frescas"],
+};
+const getID = function (category) {
+  return category.toLowerCase().split(" ").join("-");
 };
 
 const hours = {
@@ -393,28 +478,9 @@ const hours = {
 
 function Menu() {
   return (
-    <div className="flex flex-row py-16 px-16 text-xl bg-menu-background">
+    <div className="px-16 py-16 text-xl bg-menu-background">
       {/****** SIDEBAR ******/}
-      <div className="w-1/5 flex flex-col gap-8">
-        {/* MENU DOWNLOAD */}
-        {/* <div className="flex gap-4 items-center">
-          <Header text="Menu" />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={2}
-            stroke="currentColor"
-            className="w-10 h-10 p-1.5 border-2 border-black rounded-full"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
-            />
-          </svg>
-        </div> */}
-
+      <div className="fixed w-[15vw] h-[80vh] border-r-4 border-red-primary">
         {/* MENU CATEGORIES */}
         <div className="flex flex-col gap-8">
           {Object.entries(categories).map(function ([category, items]) {
@@ -446,7 +512,7 @@ function Menu() {
       </div>
 
       {/****** MENU ******/}
-      <div className="w-4/5">
+      <div className="relative ml-[20vw]">
         {/* STATUS */}
         {/* <Closing /> */}
 
@@ -456,16 +522,20 @@ function Menu() {
             return (
               <div>
                 <Header text={category} />
-                <div className={`grid grid-cols-${menuItemsPerLine[category]}`}>
-                  {console.log(category, menuItemsPerLine[category])}
-                  {items.map(({ item, description, price }) => (
-                    <MenuItem
-                      name={item}
-                      description={description}
-                      price={price}
-                      multiItemPerLine={menuItemsPerLine[category] > 1}
-                    />
-                  ))}
+                <div className={`grid ${menuItemStyles[category]}`}>
+                  {items.map(
+                    ({ item, description, price, subitems = null }) => (
+                      <MenuItem
+                        name={item}
+                        description={description}
+                        price={price}
+                        multiItemPerLine={
+                          Number(menuItemStyles[category].slice(-1)) > 1
+                        }
+                        subitems={subitems}
+                      />
+                    )
+                  )}
                 </div>
               </div>
             );
@@ -478,18 +548,68 @@ function Menu() {
 
 // ***** GENERAL COMPOENENTS *****
 function Header({ text }) {
-  return <h3 className="text-4xl font-semibold">{text}</h3>;
+  return (
+    <h3 id={getID(text)} className="text-4xl font-bold">
+      {text}
+    </h3>
+  );
 }
 
 // ***** SIDEBAR COMPONENTS *****
 function Category({ text, current = false }) {
   return (
-    <p className={"text-gray-secondary " + (current ? "text-red-primary" : "")}>
+    <a
+      href={`#${getID(text)}`}
+      className={`text-gray-secondary ${
+        current ? "text-red-primary" : ""
+      } hover:text-red-primary`}
+    >
       {text}
-    </p>
+    </a>
   );
 }
 
+// ***** MENU COMPONENTS *****
+function MenuItem({ name, description, price, multiItemPerLine, subitems }) {
+  const divStyle =
+    "p-3 pt-4 border-b-2 border-gray-tertiary border-dashed " +
+    (multiItemPerLine
+      ? ""
+      : "flex flex-row justify-between items-center gap-12");
+
+  return (
+    <>
+      <div className={divStyle}>
+        <div>
+          <p className="font-bold">{name}</p>
+          {description ?? <p className="text-gray-secondary">{description}</p>}
+        </div>
+        <p>
+          {price !== 0
+            ? new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "USD",
+              }).format(price)
+            : ""}
+        </p>
+      </div>
+      {subitems &&
+        subitems.map(({ item, description, color }) => (
+          <div className="flex flex-row items-center gap-4 ml-10 p-3 pt-4 border-b-2 border-gray-tertiary border-dashed">
+            <div className={`w-4 h-4 rounded-full ${color}`}></div>
+            <div>
+              <p className="font-semibold">{item}</p>
+              {description ?? (
+                <p className="text-gray-secondary">{description}</p>
+              )}
+            </div>
+          </div>
+        ))}
+    </>
+  );
+}
+
+// ************************************************************
 function Option({ text }) {
   return (
     <div className="flex flex-row gap-2 items-center">
@@ -499,34 +619,6 @@ function Option({ text }) {
   );
 }
 
-// ***** MENU COMPONENTS *****
-function MenuItem({ name, description, price, multiItemPerLine = false }) {
-  console.log(name, multiItemPerLine);
-  const divStyle =
-    "p-3 pt-4 border-b-2 border-gray-tertiary border-dashed " +
-    (multiItemPerLine
-      ? ""
-      : "flex flex-row justify-between items-center gap-12");
-
-  return (
-    <div className={divStyle}>
-      <div>
-        <p className="font-semibold">{name}</p>
-        {description ?? <p className="text-gray-secondary">{description}</p>}
-      </div>
-      <p>
-        {price !== 0
-          ? new Intl.NumberFormat("en-US", {
-              style: "currency",
-              currency: "USD",
-            }).format(price)
-          : ""}
-      </p>
-    </div>
-  );
-}
-
-// ************************************************************
 function PlaceholderIcon() {
   return (
     <svg
