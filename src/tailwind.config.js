@@ -6,6 +6,7 @@ module.exports = {
     extend: {},
     colors: {
       red: "#C70000",
+      darkred: "#940034",
     },
   },
   plugins: [],
