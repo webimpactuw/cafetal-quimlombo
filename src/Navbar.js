@@ -4,7 +4,7 @@ import cafeLogo from './Logo.png';
 function Navbar() {
   return (
     <>
-      <div className="bg-red font-Brygada text-xl">
+      <div className="bg-red text-xl">
         <div className="flex justify-between">
           <div className="px-[40px] py-[20px] flex space-x-7 items-center">
             <Link to="/" className="object-cover w-[42px] h-[42px]"><img src={cafeLogo} alt='logo'></img></Link>
