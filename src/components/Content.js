@@ -12,10 +12,10 @@ import Hours from './Hours.js';
 function Content(){
     return (
         <div className = "pb-3 font-serif bg-white w-screen">
-            <div className = "h-371 w-screen bg-[url('/public/pictures/topFoodPic.jpeg')] bg-center bg-cover border-b-8 border-burgundy">
+            <div className = "h-371 w-screen bg-[url('/public/pictures/topFoodPic.jpeg')] bg-center bg-cover border-b-[6px] border-burgundy">
             </div>
-            <div className = "w-screen absolute translate-y-negH translate-x-1/8 flex flex-row justify-center">
-                <p className = "text-[black] text-center flex items-center justify-center rounded-2xl text-xl bg-beige px-2 h-94 w-786 border-8 border-burgundy">
+            <div className = "w-screen absolute translate-y-[-49px] translate-x-1/8 flex flex-row justify-center">
+                <p className = "text-[black] text-center flex items-center justify-center rounded-2xl text-xl bg-beige px-2 h-94 w-786 border-[6px] border-burgundy">
                     Located in South Seattle, Cafetal Quilombo Café 
                     is a unique restaurant offering authentic Mexican 
                     tacos in combination with Seattle’s iconic coffee.

@@ -34,6 +34,9 @@ function Hours(){
                     <p1>Saturday</p1>
                     <p1>10:00am - 3:00pm</p1>
                 </div>
+                <div className = "flex justify-center py-2">
+                    <div className = "flex justify-center w-[80%] border-[1px] border-[grey]"></div>
+                </div>
                 <div className = "flex justify-start items-center px-6 py-1.5 text-base">
                     <img src = {phone} alt = ""/>
                     <p1 className = "px-3">(206) 603-6412</p1>
