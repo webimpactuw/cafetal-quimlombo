@@ -1,5 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-import tacoPic from "./src/components/tacos.webp"
 
 module.exports = {
   content: ["./src/**/*.{html,js}"],

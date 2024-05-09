@@ -1,10 +1,9 @@
-import './index.css';
+import './Content.css'
 // import dish1 from './plateOfFood.png'
 import flowersRight from './flowersOnTheRight.png';
 import flowersLeft from './FlowersOnTheLeft.png';
 import staffPhoto from './staffPhoto.jpg';
 import cafePhoto from './cafePhoto.png';
-import tamales from './tacoPics.png';
 // import pin from './marker-pin-01.png'
 // import phone from './phone.png'
 import Hours from './Hours.js';
@@ -13,7 +12,7 @@ import Hours from './Hours.js';
 function Content(){
     return (
         <div className = "pb-3 font-serif bg-white w-screen">
-            <div className = "h-371 w-screen bg-topFood bg-center bg-cover border-b-8 border-burgundy">
+            <div className = "h-371 w-screen bg-[url('/public/pictures/topFoodPic.jpeg')] bg-center bg-cover border-b-8 border-burgundy">
             </div>
             <div className = "w-screen absolute translate-y-negH translate-x-1/8 flex flex-row justify-center">
                 <p className = "text-[black] text-center flex items-center justify-center rounded-2xl text-xl bg-beige px-2 h-94 w-786 border-8 border-burgundy">
@@ -25,17 +24,17 @@ function Content(){
             <div className = "bg-[white] flex flex-col justify-center items-center">
                 <h1 className = "text-[32px] font-bold pt-24 pb-3">Food</h1>
                 <div className = "flex flex-row items-center gap-16 px-10 py-2.5">
-                    <div className = "group w-80 h-64 bg-[url('tacoPics.png')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
+                    <div className = "group w-80 h-64 bg-[url('/public/pictures/tamales.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
                         <div className =  "w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500">
                             <a className = 'invisible group-hover:visible text-[white] duration-100 text-3xl' href = 'blah'>Tamales</a>
                         </div>
                     </div>
-                    <div className = "group w-80 h-64 bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
+                    <div className = "group w-80 h-64 bg-[url('/public/pictures/tacoPics.png')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
                         <div className =  "w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500">
                             <a className = 'invisible group-hover:visible text-[white] duration-100 text-3xl' href = 'blah'>Tacos</a>
                         </div>
                     </div>
-                    <div className = "group w-80 h-64 bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
+                    <div className = "group w-80 h-64 bg-[url('/public/pictures/enchi.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
                         <div className =  "w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500">
                             <a className = 'invisible group-hover:visible text-[white] duration-100 text-3xl' href = 'blah'>Enchilatas</a>
                         </div>
@@ -56,7 +55,6 @@ function Content(){
                     <img className = "h-430 w-366 object-cover rounded-2xl shadow-lgg" src = {cafePhoto} alt = ""/>
                 </div>
             </div>
-            <img src={tamales}/>
         </div>
     );
 }
