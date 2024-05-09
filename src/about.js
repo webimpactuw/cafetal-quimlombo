@@ -3,9 +3,8 @@ import React from "react";
 function About() {
   return (
     <div className="bg-gray-100 font-serif">
-      <div className="container mx-auto py-8">
         {/* Our Story */}
-        <section className="mb-8">
+        <section className="mx-auto max-w-[1200px]">
           {/* Flex container for image and text */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
             {/* Container for rounded image */}
@@ -28,12 +27,12 @@ function About() {
         </section>
         <div className="bg-gray-100 font-serif">
       {/* Red background section */}
-      <section style={{ backgroundColor: "#C70000" }} className="w-full">
-        <div className="container mx-auto py-8">
-          <section className="text-white p-4 rounded-xl">
-            <h2 className="text-4xl text-white text-lg font-serif font-bold mb-4">Location and Hours</h2>
+      <section style={{ backgroundColor: "#C70000" }} className="w-screen ">
+        <div className="container mx-auto max-w-[1200px] py-8">
+          <section className="text-white mx-auto max-w-[1400px] rounded-xl">
+            <h2 className="text-4xl text-[#FFFF] text-lg font-serif font-bold mb-4">Location and Hours</h2>
             {/* Divider with Google Map and Schedule */}
-            <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row text-[#FFFF] items-center justify-between">
               {/* Google Map */}
               <div className="w-full md:w-1/2 md:mb-4 rounded-xl overflow-hidden">
                 {/* You can embed your Google Map here */}
@@ -71,8 +70,8 @@ function About() {
       </section>
 
         {/* Get in Touch */}
-        <section>
-          <h2 className="text-4xl text-lg font-serif font-bold text-darkred mb-4">Get in Touch</h2>
+        <section className="mx-auto mt-8 max-w-[1200px]">
+          <h2 className="text-4xl  text-lg font-serif font-bold text-darkred mb-4">Get in Touch!</h2>
           {/* Social Media Links */}
           <div className="bg-white p-4 rounded-xl flex justify-between">
             {/* Phone */}
@@ -93,7 +92,6 @@ function About() {
           </div>
         </section>
       </div>
-    </div>
     </div>
   )
 }
