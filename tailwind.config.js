@@ -29,7 +29,8 @@ module.exports = {
     colors: {
       red: "#C70000",
       beige: "#F9F6EE",
-      burgundy: "#940034"
+      burgundy: "#940034",
+      green: "#13B537"
     }
   },
   plugins: [],

@@ -1,55 +1,164 @@
-import './Content.css'
-import pin from './marker-pin-01.png'
-import phone from './phone.png'
-
-function Hours(){
-    return(
-        <div className = "h-430 w-366  flex flex-col justify-center rounded-2xl shadow-lg">
-            <p1 className = "px-6 text-2xl">Open Until: 7:00pm</p1>
-                <div className = "flex justify-between items-center px-6 py-1.5 text-base">
-                    <p1>Sunday</p1>
-                    <p1>Closed</p1>
-                </div>
-                <div className = "flex justify-between items-center px-6 py-1.5 text-base">
-                    <p1>Monday</p1>
-                    <p1>10:00am - 7:00pm</p1>
-                </div>
-                <div className = "flex justify-between items-center px-6 py-1.5 text-base">
-                    <p1>Tuesday</p1>
-                    <p1>10:00am - 7:00pm</p1>
-                </div>
-                <div className = "flex justify-between items-cente px-6 py-1.5 text-base">
-                    <p1>Wednesday</p1>
-                    <p1>10:00am - 7:00pm</p1>
-                </div>
-                <div className = "flex justify-between items-center px-6 py-1.5 text-base">
-                    <p1>Thursday</p1>
-                    <p1>10:00am - 7:00pm</p1>
-                </div>
-                <div className = "flex justify-between items-center px-6 py-1.5 text-base">
-                    <p1>Friday</p1>
-                    <p1>10:00am - 7:00pm</p1>
-                </div>
-                <div className = "flex justify-between items-center px-6 py-1.5 text-base">
-                    <p1>Saturday</p1>
-                    <p1>10:00am - 3:00pm</p1>
-                </div>
-                <div className = "flex justify-center py-2">
-                    <div className = "flex justify-center w-[80%] border-[1px] border-[grey]"></div>
-                </div>
-                <div className = "flex justify-start items-center px-6 py-1.5 text-base">
-                    <img src = {phone} alt = ""/>
-                    <p1 className = "px-3">(206) 603-6412</p1>
-                </div>
-                    <div className = "flex justify-start items-center px-6 py-1.5 text-base">
-                    <img src = {pin} alt = ""/>
-                    <div className = "flex flex-col">
-                        <p1 className = "px-3">4343 15th Ave S</p1>
-                        <p1 className = "px-3">Seattle, WA 98108</p1>
-                    </div>
-                </div>
-        </div>  
-    )
-}
-
-export default Hours;
+const hours = {
+    sunday: {
+      open: 0,
+      close: 0,
+    },
+    monday: {
+      open: 10,
+      close: 19,
+    },
+    tuesday: {
+      open: 10,
+      close: 19,
+    },
+    wednesday: {
+      open: 10,
+      close: 19,
+    },
+    thursday: {
+      open: 10,
+      close: 19,
+    },
+    friday: {
+      open: 10,
+      close: 19,
+    },
+    saturday: {
+      open: 10,
+      close: 15,
+    },
+  };
+  
+  function Hours({ displayContact = true }) {
+    return (
+      <div className="px-6 py-3 w-[400px] rounded-2xl shadow-lg text-gray-primary">
+        {getOpenString()}
+  
+        <div
+          className={`flex flex-col gap-2 pb-4 ${
+            displayContact && "mb-4 border-b-[1px] border-gray-tertiary"
+          }`}
+        >
+          {Object.entries(hours).map(function ([dayOfTheWeek, { open, close }]) {
+            return (
+              <div className="relative flex justify-between">
+                {getDayOfWeek() === dayOfTheWeek && (
+                  <div className="absolute h-[100%] w-1 left-[-10px] border-l-4 border-red rounded-sm"></div>
+                )}
+                <p>
+                  {dayOfTheWeek.at(0).toUpperCase() +
+                    dayOfTheWeek.slice(1).toLowerCase()}
+                </p>
+                {intToTimeString(open, close)}
+              </div>
+            );
+          })}
+        </div>
+  
+        {displayContact && (
+          <div className="font-medium">
+            <div className="flex items-center gap-3 mb-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="stroke-gray-secondary"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+              </svg>
+              <p>(206) 603-6412</p>
+            </div>
+  
+            <div className="flex items-center gap-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="stroke-gray-secondary"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+              </svg>
+              <div>
+                <p>4343 15th Ave S</p>
+                <p>Seattle, WA 98108</p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+  
+  // HELPER FUNCTIONS
+  function getDayOfWeek() {
+    return new Intl.DateTimeFormat("en-US", {
+      weekday: "long",
+    })
+      .format(new Date())
+      .toLowerCase();
+  }
+  
+  function intToTime(time) {
+    const ampm = time < 12 ? "am" : "pm";
+  
+    if (time === 0 || time === 12) {
+      return `12:00 ${ampm}`;
+    } else {
+      return `${time % 12}:00 ${ampm}`;
+    }
+  }
+  
+  // ELEMENT FUNCTIONS
+  function getOpenString() {
+    const currentTime = new Date();
+    const dayOfWeek = getDayOfWeek();
+  
+    const openingTime = new Date();
+    openingTime.setHours(hours[dayOfWeek].open);
+    openingTime.setMinutes(0);
+    openingTime.setSeconds(0);
+    const closingTime = new Date();
+    closingTime.setHours(hours[dayOfWeek].close);
+    closingTime.setMinutes(0);
+    closingTime.setSeconds(0);
+  
+    if (openingTime < currentTime && currentTime < closingTime) {
+      return (
+        <h3 className="mb-2 text-2xl font-bold">
+          <span className="text-green">Open</span> until{" "}
+          {intToTime(closingTime.getHours())}
+        </h3>
+      );
+    } else {
+      return (
+        <p className="mb-2 text-2xl font-semibold">
+          <span className="text-red">Closed</span>
+        </p>
+      );
+    }
+  }
+  
+  function intToTimeString(open, close) {
+    if (open >= close) {
+      return <div className="text-gray-tertiary">Closed</div>;
+    } else {
+      return <div>{`${intToTime(open)} - ${intToTime(close)}`}</div>;
+    }
+  }
+  
+  export default Hours;
