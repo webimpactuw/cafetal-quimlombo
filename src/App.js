@@ -3,7 +3,7 @@ import Navbar from "./Navbar.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./placeholder-about.js";
 import Contact from "./Contact.js";
-import Menu from "./placeholder-menu.js";
+import Menu from "./Menu.js";
 import Content from "./components/Content.js";
 import Footer from "./components/Footer.js";
 
