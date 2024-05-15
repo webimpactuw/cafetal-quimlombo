@@ -478,7 +478,7 @@ const hours = {
 
 function Menu() {
   return (
-    <div className="px-16 py-16 text-xl bg-menu-background">
+    <div className="px-16 py-16 pt-32 text-xl bg-menu-background">
       {/****** SIDEBAR ******/}
       <div className="fixed w-[15vw] h-[80vh] border-r-4 border-red-primary">
         {/* MENU CATEGORIES */}
