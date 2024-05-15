@@ -1,8 +1,8 @@
 import './App.css';
-import Contact from "./Contact.js";
 import Navbar from "./Navbar.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./placeholder-about.js";
+import Contact from "./Contact.js";
 import Menu from "./placeholder-menu.js";
 
 function App() {
