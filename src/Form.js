@@ -74,7 +74,7 @@ function Form() {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="pt-12 flex justify-end pb-16"
+          className="pt-12 flex justify-end"
           disabled={!name || !email || !message}
         >
           <div className="w-[202px] h-[51px] rounded-[6px] text-white bg-red text-white flex flex-col justify-center">

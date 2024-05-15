@@ -4,7 +4,7 @@ function Contact() {
   return (
     <>
       <div className="mx-auto font-Brygada pt-[82px]">
-        <div className="h-[235px] w-full bg-[url('./Images/contactImage.png')] bg-center bg-cover border-b-[6px] border-burgundy">
+        <div className="h-[235px] w-full bg-[url('/public/pictures/contactImage.png')] bg-center bg-cover border-b-[6px] border-burgundy">
           <div className="mx-auto flex-col justify-center border-8 border-burgundy rounded-[16px] w-[980px] h-[146px] translate-y-[160px] bg-white">
             <div className="">
               <h1 className="text-[32px] py-1.5 font-bold text-center">
