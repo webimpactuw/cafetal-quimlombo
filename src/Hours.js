@@ -43,7 +43,7 @@ function Hours({ displayContact = true,  }) {
           return (
             <div className="relative flex justify-between">
               {getDayOfWeek() === dayOfTheWeek && (
-                <div className="absolute h-[100%] w-1 left-[-10px] border-l-4 border-red rounded-sm"></div>
+                <div className="absolute h-[100%] w-1 left-[-10px] border-l-4 border-red-primary rounded-sm"></div>
               )}
               <p>
                 {dayOfTheWeek.at(0).toUpperCase() +
@@ -140,14 +140,14 @@ function getOpenString() {
   if (openingTime < currentTime && currentTime < closingTime) {
     return (
       <h3 className="mb-2 text-2xl font-bold">
-        <span className="text-green">Open</span> until{" "}
+        <span className="text-green-primary">Open</span> until{" "}
         {intToTime(closingTime.getHours())}
       </h3>
     );
   } else {
     return (
       <p className="mb-2 text-2xl font-semibold">
-        <span className="text-red">Closed</span>
+        <span className="text-red-primary">Closed</span>
       </p>
     );
   }
