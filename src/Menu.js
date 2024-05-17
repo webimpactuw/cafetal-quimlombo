@@ -521,7 +521,7 @@ function Menu() {
           {Object.entries(menu).map(function ([category, items]) {
             return (
               <div>
-                <Header text={category} />
+                <Header id={category} text={category} />
                 <div className={`grid ${menuItemStyles[category]}`}>
                   {items.map(
                     ({ item, description, price, subitems = null }) => (

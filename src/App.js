@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import Navbar from "./Navbar.js";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./placeholder-about.js";
@@ -13,18 +13,26 @@ function App() {
       <Router>
         <Navbar />
         <div>
-            <Routes>
-              <Route path="/" element ={<Content/>}></Route>
-              <Route path="/about" element={ <About />}> </Route>
-              <Route path="/menu" element={ <Menu />}> </Route>
-              <Route path="/contact" element={ <Contact />}> </Route>
-            </Routes>
+          <Routes>
+            <Route path="/" element={<Content />}></Route>
+            <Route path="/about" element={<About />}>
+              {" "}
+            </Route>
+            <Route path="/menu" element={<Menu />}>
+              {" "}
+            </Route>
+            <Route path="/contact" element={<Contact />}>
+              {" "}
+            </Route>
+          </Routes>
         </div>
-        </Router>
-        <Footer/>
-      </div>
+      </Router>
+      <Footer />
+    </div>
+    // TODO LIST:
+    // - INSTAGRAM LINK
+    // - CONTACT PAGE BACKGROUND COLOR
   );
 }
-
 
 export default App;

@@ -8,6 +8,7 @@ import cafePhoto from "./cafePhoto.png";
 // import phone from './phone.png'
 import Hours from "./Hours.js";
 // import topFood from './topFoodPic.jpeg'
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 function Content() {
   return (
@@ -24,37 +25,40 @@ function Content() {
         <h1 className="text-[32px] font-bold pt-24 pb-3">Food</h1>
         <div className="flex flex-row items-center gap-16 px-10 py-2.5">
           <div className="group w-80 h-64 bg-[url('/public/pictures/tamales.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
-            <div className="w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500">
-              <a
+            <Link
+              to="/menu"
+              className="w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
+            >
+              <Link
+                to="/menu"
                 className="invisible group-hover:visible text-[white] duration-100 text-3xl"
-                href="blah"
               >
                 Tamales
-              </a>
-            </div>
+              </Link>
+            </Link>
           </div>
           <div className="group w-80 h-64 bg-[url('/public/pictures/tacoPics.png')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
             <div className="w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500">
-              <a
+              <Link
+                to="/menu"
                 className="invisible group-hover:visible text-[white] duration-100 text-3xl"
-                href="blah"
               >
                 Tacos
-              </a>
+              </Link>
             </div>
           </div>
           <div className="group w-80 h-64 bg-[url('/public/pictures/enchi.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl">
             <div className="w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500">
-              <a
+              <Link
+                to="/menu"
                 className="invisible group-hover:visible text-[white] duration-100 text-3xl"
-                href="blah"
               >
                 Enchilatas
-              </a>
+              </Link>
             </div>
           </div>
           <div className="text-[24px] group px-8 py-2.5">
-            <a href="blah">Menu&gt;</a>
+            <Link to="/menu">Menu&gt;</Link>
           </div>
         </div>
       </div>
