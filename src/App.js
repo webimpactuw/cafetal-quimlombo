@@ -7,11 +7,13 @@ import Contact from "./Contact.js";
 import Menu from "./Menu.js";
 import Content from "./components/Content.js";
 import Footer from "./components/Footer.js";
+import ScrollToTop from './scrollToTop.js';
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <ScrollToTop/>
         <Navbar />
         <div>
             <Routes>
