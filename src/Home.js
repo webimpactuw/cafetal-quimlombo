@@ -1,21 +1,19 @@
-import "./Content.css";
-// import dish1 from './plateOfFood.png'
-import flowersRight from "./flowersOnTheRight.png";
-import flowersLeft from "./FlowersOnTheLeft.png";
-import staffPhoto from "./staffPhoto.jpg";
-import cafePhoto from "./cafePhoto.png";
-// import pin from './marker-pin-01.png'
-// import phone from './phone.png'
-import Hours from "./Hours.js";
-// import topFood from './topFoodPic.jpeg'
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-function Content() {
+import flowersLeft from "./components/FlowersOnTheLeft.png";
+import flowersRight from "./components/flowersOnTheRight.png";
+import staffPhoto from "./components/staffPhoto.jpg";
+import cafePhoto from "./components/cafePhoto.png";
+
+import Hours from "./components/Hours.js";
+
+function Home() {
   return (
-    <div className="pt-[82px] pb-3 font-Brygada bg-white">
-      <div className="h-371 bg-[url('/public/pictures/topFoodPic.jpeg')] bg-center bg-cover border-b-[6px] border-burgundy mx-auto"></div>
-      <div className="w-full absolute translate-y-[-49px] translate-x-1/8 flex flex-row justify-center">
-        <p className="text-[black] text-center flex items-center justify-center rounded-2xl text-[20px] bg-beige px-2 h-94 w-786 border-[6px] border-burgundy">
+    <div className="pt-[82px]">
+      {/* HERO */}
+      <div className="h-371 bg-[url('/public/pictures/topFoodPic.jpeg')] bg-center bg-cover border-b-[6px] border-red-dark"></div>
+      <div className="absolute translate-x-1/8 translate-y-[-49px] w-full flex flex-row justify-center">
+        <p className="px-2 h-94 w-786 flex items-center bg-beige text-xl text-gray-primary font-medium text-center rounded-2xl border-[6px] border-red-dark">
           Located in South Seattle, Cafetal Quilombo Café is a unique restaurant
           offering authentic Mexican tacos in combination with Seattle’s iconic
           coffee.
@@ -87,4 +85,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Home;

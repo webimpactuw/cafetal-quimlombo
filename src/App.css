@@ -6,4 +6,9 @@
   padding: 0;
   box-sizing: border-box;
   scroll-padding-top: 8vw;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
