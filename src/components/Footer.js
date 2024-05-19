@@ -3,7 +3,7 @@ function Footer() {
     <div className="px-4 flex justify-between items-center bg-red-primary text-white">
       {/* COPYRIGHT */}
       <p className="text-lg flex items-center px-8 p-4">
-        &copy; 2024 Cafetal Quilombo Cafe
+        &copy; 2024 Cafetal Quilombo Café
       </p>
 
       {/* SOCIAL MEDIA */}
