@@ -446,12 +446,12 @@ function Menu() {
   return (
     <div className="px-16 py-16 pt-32 text-xl bg-beige">
       {/****** SIDEBAR ******/}
-      <div className="fixed w-[15vw] h-[80vh] border-r-4 border-red-primary">
+      <div className="fixed w-[15vw] h-[70vh] border-r-4 border-red-primary">
         {/* MENU CATEGORIES */}
         <div className="flex flex-col gap-8">
           {Object.entries(categories).map(function ([category, items]) {
             return (
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-2">
                 <Header text={category} />
                 {items.map((item) => (
                   <Category text={item} />
