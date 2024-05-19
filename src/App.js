@@ -4,14 +4,14 @@ import ScrollToTop from "./scrollToTop.js";
 
 import Navbar from "./components/Navbar.js";
 import Footer from "./components/Footer.js";
-import Home from "./Home.js";
-import About from "./About.js";
-import Menu from "./Menu.js";
-import Contact from "./Contact.js";
+import Home from "./pages/Home.js";
+import About from "./pages/About.js";
+import Menu from "./pages/Menu.js";
+import Catering from "./pages/Catering.js";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App text-gray-primary">
       <Router>
         <ScrollToTop />
         <Navbar />
@@ -20,15 +20,15 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/menu" element={<Menu />}></Route>
-            <Route path="/contact" element={<Contact />}></Route>
+            <Route path="/catering" element={<Catering />}></Route>
           </Routes>
         </div>
       </Router>
       <Footer />
     </div>
     // TODO LIST:
-    // - INSTAGRAM LINK
     // - CONTACT PAGE BACKGROUND COLOR
+    // - HOURS COMPONENT PHONE AND MAP LINK
   );
 }
 

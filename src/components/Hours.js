@@ -31,7 +31,7 @@ const hours = {
 
 function Hours({ displayContact = true }) {
   return (
-    <div className="px-6 py-3 w-[400px] rounded-2xl shadow-lg text-gray-primary">
+    <div className="px-6 bg-[white] py-3 w-[400px] rounded-2xl shadow-lg text-gray-primary">
       {getOpenString()}
 
       <div
@@ -43,7 +43,7 @@ function Hours({ displayContact = true }) {
           return (
             <div className="relative flex justify-between">
               {getDayOfWeek() === dayOfTheWeek && (
-                <div className="absolute h-[100%] w-1 left-[-10px] border-l-4 border-red rounded-sm"></div>
+                <div className="absolute h-[100%] w-1 left-[-10px] border-l-4 border-red-primary rounded-sm"></div>
               )}
               <p>
                 {dayOfTheWeek.at(0).toUpperCase() +
@@ -57,46 +57,50 @@ function Hours({ displayContact = true }) {
 
       {displayContact && (
         <div className="font-medium">
-          <div className="flex items-center gap-3 mb-2">
+          <div className="flex items-center gap-3 mb-2 group hover:text-red-primary transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="stroke-gray-secondary"
+              className="stroke-gray-secondary group-hover:stroke-red-primary transition"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
             </svg>
-            <p>(206) 603-6412</p>
+            <a href="tel:+12066026412" target="_blank" rel="noreferrer">
+              (206) 602-6412
+            </a>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 group hover:text-red-primary transition">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              className="stroke-gray-secondary"
+              className="stroke-gray-secondary group-hover:stroke-red-primary transition"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
               <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
             </svg>
-            <div>
+            <a
+              href="https://maps.app.goo.gl/7pZER3j5H2RD5uQN7"
+              target="_blank"
+              rel="noreferrer"
+            >
               <p>4343 15th Ave S</p>
               <p>Seattle, WA 98108</p>
-            </div>
+            </a>
           </div>
         </div>
       )}
@@ -140,14 +144,14 @@ function getOpenString() {
   if (openingTime < currentTime && currentTime < closingTime) {
     return (
       <h3 className="mb-2 text-2xl font-bold">
-        <span className="text-green">Open</span> until{" "}
+        <span className="text-green-primary">Open</span> until
         {intToTime(closingTime.getHours())}
       </h3>
     );
   } else {
     return (
       <p className="mb-2 text-2xl font-semibold">
-        <span className="text-red">Closed</span>
+        <span className="text-red-primary">Closed</span>
       </p>
     );
   }

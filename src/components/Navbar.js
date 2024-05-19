@@ -9,16 +9,22 @@ function Navbar() {
         <Link to="/" className="w-[42px] h-[42px] object-cover">
           <img src={cafeLogo} alt="logo"></img>
         </Link>
-        <Link to="/" className="text-3xl ">
+        <Link to="/" className="text-3xl hover:text-beige transition">
           Cafetal Quilombo Café
         </Link>
       </div>
 
       {/* LINKS */}
       <div className="px-[40px] py-[20px] flex gap-10 items-center">
-        <Link to="/about">About Us</Link>
-        <Link to="/menu">Menu</Link>
-        <Link to="/contact">Catering</Link>
+        <Link to="/about" className="hover:text-beige transition">
+          About Us
+        </Link>
+        <Link to="/menu" className="hover:text-beige transition">
+          Menu
+        </Link>
+        <Link to="/catering" className="hover:text-beige transition">
+          Catering
+        </Link>
       </div>
     </div>
   );
