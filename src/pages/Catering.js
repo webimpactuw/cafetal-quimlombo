@@ -15,7 +15,7 @@ function Catering() {
           </p>
         </div>
       </div>
-      <div className="max-w-[1300px] mx-auto pt-48 pb-24">
+      <div className="max-w-[1200px] mx-auto pt-48 pb-24">
         <Form />
       </div>
     </div>
