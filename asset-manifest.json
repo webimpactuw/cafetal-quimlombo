@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/cafetal-quilombo/static/css/main.f14ba4cd.css",
+    "main.js": "/cafetal-quilombo/static/js/main.8eaff3e9.js",
+    "static/js/453.a4775238.chunk.js": "/cafetal-quilombo/static/js/453.a4775238.chunk.js",
+    "static/media/staffPhoto.jpg": "/cafetal-quilombo/static/media/staffPhoto.34a0ee305ab5391f288e.jpg",
+    "static/media/quil.png": "/cafetal-quilombo/static/media/quil.b4cfa59666eb23b2a838.png",
+    "static/media/tacoPics.png": "/cafetal-quilombo/static/media/tacoPics.bda30223b858442271ed.png",
+    "static/media/topFoodPic.jpeg": "/cafetal-quilombo/static/media/topFoodPic.2b69ac69618b6f7ac576.jpeg",
+    "static/media/contactImage.png": "/cafetal-quilombo/static/media/contactImage.fa51fa66e7931247b5ac.png",
+    "static/media/cafePhoto.png": "/cafetal-quilombo/static/media/cafePhoto.f14c52849badb97ce632.png",
+    "static/media/FlowersOnTheLeft.png": "/cafetal-quilombo/static/media/FlowersOnTheLeft.6d51ed6dfa29716d1fcb.png",
+    "static/media/enchi.webp": "/cafetal-quilombo/static/media/enchi.92f1275971223576d890.webp",
+    "static/media/flowersOnTheRight.png": "/cafetal-quilombo/static/media/flowersOnTheRight.451e1f9ed520e2e5e2f7.png",
+    "static/media/tamales.webp": "/cafetal-quilombo/static/media/tamales.b04af533a6b7ffc9e114.webp",
+    "static/media/instagram.png": "/cafetal-quilombo/static/media/instagram.28944b9a16197e849f88.png",
+    "static/media/facebook.png": "/cafetal-quilombo/static/media/facebook.49e67d43221b6bb1aa86.png",
+    "static/media/call.png": "/cafetal-quilombo/static/media/call.9ecec675bca004b7d120.png",
+    "static/media/copyright.png": "/cafetal-quilombo/static/media/copyright.79328295dbd50fc2a56d.png",
+    "index.html": "/cafetal-quilombo/index.html",
+    "main.f14ba4cd.css.map": "/cafetal-quilombo/static/css/main.f14ba4cd.css.map",
+    "main.8eaff3e9.js.map": "/cafetal-quilombo/static/js/main.8eaff3e9.js.map",
+    "453.a4775238.chunk.js.map": "/cafetal-quilombo/static/js/453.a4775238.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f14ba4cd.css",
+    "static/js/main.8eaff3e9.js"
+  ]
+}
