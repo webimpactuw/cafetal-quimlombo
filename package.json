@@ -2,6 +2,7 @@
   "name": "cafetal-quilombo",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://webimpactuw.github.io/cafetal-quilombo/",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@sanity/block-content-to-react": "^3.0.0",
