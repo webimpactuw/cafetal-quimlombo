@@ -26,9 +26,6 @@ function App() {
       </Router>
       <Footer />
     </div>
-    // TODO LIST:
-    // - CONTACT PAGE BACKGROUND COLOR
-    // - HOURS COMPONENT PHONE AND MAP LINK
   );
 }
 
