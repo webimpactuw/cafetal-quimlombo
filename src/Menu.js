@@ -1,11 +1,13 @@
 import "./App.css";
+import React, { useEffect, useState } from 'react';
+import sanityClient from './client.js'
 
 const menu = {
   Breakfast: [
     {
       item: "Beans and Cheese Burrito",
       description: "Fried pinto beans and cheese",
-      price: 6.99,
+      price:`<p>{menuInfo.menuInfo}</p>`,
     },
     {
       item: "Fried pinto beans and cheese",
@@ -477,6 +479,14 @@ const hours = {
 };
 
 function Menu() {
+  const [menuInfo, setMenuInfo] = useState({
+    menuInfo: 6.88
+  });
+  useEffect(() => {
+    sanityClient.fetch('*[_type == "home"]').then((data) => 
+      setMenuInfo(data))
+      .catch(console.error)
+  });
   return (
     <div className="px-16 py-16 pt-32 text-xl bg-menu-background">
       {/****** SIDEBAR ******/}
