@@ -4,8 +4,8 @@ export default defineType({
     name: 'menu',
     title: 'Menu Page',
     type: 'document',
-    _type: 'home',
-    field: [
+    _type: 'menu',
+    fields: [
         defineField({
             name: 'menuInfo',
             title: 'Menu Info',

@@ -480,10 +480,10 @@ const hours = {
 
 function Menu() {
   const [menuInfo, setMenuInfo] = useState({
-    menuInfo: 6.88
+    menuInfo: `6.88`
   });
   useEffect(() => {
-    sanityClient.fetch('*[_type == "home"]').then((data) => 
+    sanityClient.fetch('*[_type == "menu"]').then((data) => 
       setMenuInfo(data))
       .catch(console.error)
   });
@@ -600,7 +600,7 @@ function MenuItem({ name, description, price, multiItemPerLine, subitems }) {
                 style: "currency",
                 currency: "USD",
               }).format(price)
-            : ""}
+            : ""} 
         </p>
       </div>
       {subitems &&
