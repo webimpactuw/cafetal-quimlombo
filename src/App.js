@@ -16,16 +16,16 @@ function App() {
       <Router>
         <ScrollToTop/>
         <MobileNavbar />
-        {/* <div>
+        <div>
             <Routes>
               <Route path="/" element ={<Content/>}></Route>
               <Route path="/about" element={ <About />}> </Route>
               <Route path="/menu" element={ <Menu />}> </Route>
               <Route path="/contact" element={ <Contact />}> </Route>
             </Routes>
-        </div> */}
+        </div>
         </Router>
-        {/* <Footer/> */}
+        <Footer/>
       </div>
   );
 }
