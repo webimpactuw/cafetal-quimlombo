@@ -1,9 +1,12 @@
+import React, { useEffect, useState } from "react";
+import sanityClient from "./client.js";
+
 const menu = {
   Breakfast: [
     {
       item: "Beans and Cheese Burrito",
       description: "Fried pinto beans and cheese",
-      price: 6.99,
+      price: `<p>{menuInfo.menuInfo}</p>`,
     },
     {
       item: "Fried pinto beans and cheese",
@@ -443,6 +446,15 @@ const getID = function (category) {
 };
 
 function Menu() {
+  const [menuInfo, setMenuInfo] = useState({
+    menuInfo: `6.88`,
+  });
+  useEffect(() => {
+    sanityClient
+      .fetch('*[_type == "menu"]')
+      .then((data) => setMenuInfo(data))
+      .catch(console.error);
+  });
   return (
     <div className="px-16 py-16 pt-32 text-xl bg-beige">
       {/****** SIDEBAR ******/}
