@@ -1,6 +1,7 @@
 
 import './App.css';
 import Navbar from "./Navbar.js";
+import MobileNavbar from './MobileNavBar.js';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "./about.js";
 import Contact from "./Contact.js";
@@ -14,17 +15,17 @@ function App() {
     <div className="App">
       <Router>
         <ScrollToTop/>
-        <Navbar />
-        <div>
+        <MobileNavbar />
+        {/* <div>
             <Routes>
               <Route path="/" element ={<Content/>}></Route>
               <Route path="/about" element={ <About />}> </Route>
               <Route path="/menu" element={ <Menu />}> </Route>
               <Route path="/contact" element={ <Contact />}> </Route>
             </Routes>
-        </div>
+        </div> */}
         </Router>
-        <Footer/>
+        {/* <Footer/> */}
       </div>
   );
 }
