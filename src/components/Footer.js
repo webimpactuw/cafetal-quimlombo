@@ -1,3 +1,7 @@
+// ISSUES:
+// - For screen widths under 340px, the footer breaks the page.
+// - In the menu page, the sidebar can be seen through the footer.
+
 function Footer() {
   return (
     <div className="px-4 flex justify-between items-center bg-red-primary text-white">
