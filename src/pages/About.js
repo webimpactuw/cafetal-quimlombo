@@ -6,21 +6,23 @@ function About() {
   return (
     <div className="pt-40">
       {/* OUR SOTRY */}
-      <section className="mb-24 max-w-[1300px] mx-auto">
+      <section className="mb-8 md:mb-24 max-w-[1300px] mx-auto">
         {/* Flex container for image and text */}
-        <div className="flex flex-row items-center gap-16">
+        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-4 lg:gap-16 px-8">
           {/* Container for rounded image */}
-          <div className="w-1/4 rounded-xl overflow-hidden">
+          <div className="md:w-2/5 lg:w-1/4 order-2 md:order-1 rounded-xl overflow-hidden">
             {/* Image */}
             <img src={cafeQuill} alt="Cafe description of origins" />
           </div>
           {/* Container for text */}
-          <div className="w-3/4">
-            <div className="p-8 bg-beige rounded-xl border-[6px] border-red-dark">
+          <div className="md:w-3/5 lg:w-3/4 order-1 md:order-2">
+            <div className="md:p-6 lg:p-8 md:bg-beige md:rounded-xl md:border-[6px] md:border-red-dark">
               {/* Our Story title */}
-              <h2 className="text-4xl font-bold mb-4">Our Story</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-red-primary md:text-gray-primary">
+                Our Story
+              </h2>
               {/* Text with serif font */}
-              <p className="text-lg leading-6">
+              <p className="leading-6">
                 Historically, a quilombo was a refuge in Brazil, offering
                 shelter and safety. From this meaning, the owners decided to
                 name their coffee shop after this. Cafetal Quilombo Café is
@@ -34,10 +36,12 @@ function About() {
 
       {/* LOCATION AND HOURS */}
       <section className="text-white bg-red-primary">
-        <div className="max-w-[1300px] mx-auto pt-12 pb-24">
-          <h2 className="text-4xl font-bold mb-4">Location and Hours</h2>
+        <div className="max-w-[1300px] mx-auto pt-6 md:pt-12 pb-12 md:pb-24 px-8">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
+            Location and Hours
+          </h2>
           {/* Divider with Google Map and Schedule */}
-          <div className="flex flex-row gap-12 items-stretch">
+          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
             {/* Google Map */}
             <iframe
               title="Google Map"
@@ -49,16 +53,18 @@ function About() {
               className="rounded-xl"
             ></iframe>
             {/* Schedule */}
-            <Hours displayContact={false} />
+            <div>
+              <Hours displayContact={false} />
+            </div>
           </div>
         </div>
       </section>
 
       {/* CONTACT */}
-      <section className="max-w-[1300px] mx-auto my-24">
-        <h2 className="text-4xl font-bold mb-4">Get in Touch!</h2>
+      <section className="max-w-[1300px] mx-auto my-12 md:my-24 px-8">
+        <h2 className="text-2xl md:text-4xl font-bold mb-4">Get in Touch!</h2>
         {/* Social Media Links */}
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between gap-2">
           {/* Phone */}
           <a
             href="tel:+12066026412"
@@ -68,10 +74,10 @@ function About() {
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
+              width="48"
+              height="48"
               viewBox="0 0 24 24"
-              fill="none"
+              fill="currentColor"
               stroke="currentColor"
               stroke-width="2"
               stroke-linecap="round"
@@ -80,7 +86,7 @@ function About() {
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
             </svg>
-            <span className="ml-1 text-lg font-semibold hover:text-red-primary transition">
+            <span className="ml-1 text-base lg:text-lg font-semibold hover:text-red-primary transition">
               (206) 602-6412
             </span>
           </a>
@@ -188,7 +194,7 @@ function About() {
                 ></circle>
               </g>
             </svg>
-            <span className="ml-1 text-lg font-semibold hover:text-red-primary transition">
+            <span className="ml-1 text-base lg:text-lg font-semibold hover:text-red-primary transition">
               @cafetalquilombocafe
             </span>
           </a>
@@ -214,7 +220,7 @@ function About() {
                 d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"
               ></path>
             </svg>
-            <span className="ml-1 text-lg font-semibold hover:text-red-primary transition">
+            <span className="ml-1 text-base lg:text-lg font-semibold hover:text-red-primary transition">
               Cafetal Quilombo
             </span>
           </a>

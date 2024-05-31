@@ -31,7 +31,7 @@ const hours = {
 
 function Hours({ displayContact = true }) {
   return (
-    <div className="px-6 bg-[white] py-3 w-[400px] rounded-2xl shadow-lg text-gray-primary">
+    <div className="max-width-[400px] px-6 py-3 rounded-2xl shadow-lg bg-[white] text-gray-primary">
       {getOpenString()}
 
       <div
@@ -143,7 +143,7 @@ function getOpenString() {
 
   if (openingTime < currentTime && currentTime < closingTime) {
     return (
-      <h3 className="mb-2 text-2xl font-bold">
+      <h3 className="mb-2 text-lg md:text-2xl font-bold">
         <span className="text-green-primary">Open</span> until{" "}
         {intToTime(closingTime.getHours())}
       </h3>
