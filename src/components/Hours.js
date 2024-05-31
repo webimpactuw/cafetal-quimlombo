@@ -31,7 +31,7 @@ const hours = {
 
 function Hours({ displayContact = true }) {
   return (
-    <div className="px-6 bg-[white] py-3 w-[400px] rounded-2xl shadow-lg text-gray-primary">
+    <div className="w-[326px] px-6 bg-[white] py-3 md:w-[500px] xl:w-[400px] rounded-2xl shadow-lg text-gray-primary">
       {getOpenString()}
 
       <div

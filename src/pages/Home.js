@@ -11,9 +11,11 @@ function Home() {
   return (
     <div className="pt-[82px]">
       {/* HERO */}
-      <div className="h-371 bg-[url('/public/bg-images/home-hero.jpeg')] bg-center bg-cover border-b-[6px] border-red-dark"></div>
-      <div className="absolute translate-x-1/8 translate-y-[-49px] w-full flex flex-row justify-center">
-        <p className="px-8 h-94 w-786 flex items-center bg-beige text-xl text-gray-primary font-medium text-center rounded-2xl border-[6px] border-red-dark">
+      <div className="h-[173px] w-auto bg-[url('/public/bg-images/home-hero.jpeg')] bg-center bg-cover border-b-[6px] border-red-dark
+      md:h-371"></div>
+      <div className="absolute translate-x-1/8 translate-y-[-80px] md:translate-y-[-60px] xl:translate-y-[-49px] w-full flex flex-row justify-center">
+        <p className="h-[160px] w-[320px] flex items-center bg-beige text-xl text-gray-primary font-medium text-center rounded-2xl border-[6px] border-red-dark text-[16px] leading-[18.6px]
+        md:px-8 md:h-[120px] md:w-[600px] md:text-lg xl:px-8 xl:h-94 xl:w-786 xl:text-xl">
           Located in South Seattle, Cafetal Quilombo Café is a unique restaurant
           offering authentic Mexican tacos in combination with Seattle’s iconic
           coffee.
@@ -21,35 +23,34 @@ function Home() {
       </div>
 
       {/* FOOD */}
-      <div className="pt-32 flex flex-col justify-center items-center mx-auto">
+      <div className=" mx-auto pt-32 flex flex-col justify-center items-center max-w-[1280px] px-8 md:px-16">
         <h1 className="text-4xl font-bold">Food</h1>
-        <div className="flex flex-row items-center gap-16 px-10 py-2.5">
-          <div className="group w-80 h-64 bg-[url('/public/bg-images/menu-tamales.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer">
+        <div className="flex flex-col items-center gap-16 w-full py-2.5 xl:flex-row shrink">
+          <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-tamales.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
             <Link
               to="/menu"
-              className="w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
-            >
-              <p className="invisible group-hover:visible text-[white] duration-100 text-3xl">
+              className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500 xl:w-80 xl:h-64">
+              <p className="xl:invisible xl:group-hover:visible text-[white] xl:duration-100 text-3xl">
                 Tamales
               </p>
             </Link>
           </div>
-          <div className="group w-80 h-64 bg-[url('/public/bg-images/menu-tacos.png')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer">
+          <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-tacos.png')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
             <Link
               to="/menu"
-              className="w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
+              className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500 xl:w-80 xl:h-64"
             >
-              <p className="invisible group-hover:visible text-[white] duration-100 text-3xl">
+              <p className="xl:invisible xl:group-hover:visible text-[white] xl:duration-100 text-3xl">
                 Tacos
               </p>
             </Link>
           </div>
-          <div className="group w-80 h-64 bg-[url('/public/bg-images/menu-enchiladas.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer">
+          <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-enchiladas.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
             <Link
               to="/menu"
-              className="w-80 h-64 rounded-3xl bg-[black] bg-opacity-0 hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
+              className="h-[120px] :w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500 xl:w-80 xl:h-64"
             >
-              <p className="invisible group-hover:visible text-[white] duration-100 text-3xl">
+              <p className="xl:invisible xl:group-hover:visible text-[white] xl:duration-100 text-3xl">
                 Enchilatas
               </p>
             </Link>
@@ -78,21 +79,21 @@ function Home() {
       </div>
 
       {/* FLOWERS */}
-      <div className="px-8 py-20 flex justify-between bg-white">
-        <img className="h-147 w-562" src={flowerBorderLeft} alt="" />
-        <img className="h-147 w-562" src={flowerBorderRight} alt="" />
+      <div className="mx-auto xl:px-8 xl:py-20 xl:flex xl:justify-between justify-center bg-white pt-[40px] max-w-[1300px]">
+        <img className="w-0 h-0 xl:h-147 xl:w-562" src={flowerBorderLeft} alt="" />
+        <img className="w-0 h-0 xl:h-147 xl:w-562" src={flowerBorderRight} alt="" />
       </div>
 
       {/* HOURS */}
-      <div className="max-w-[1300px] mx-auto pb-20 flex justify-center items-stretch gap-16 bg-white">
+      <div className="mx-auto md:max-w-[1000px] xl:max-w-[1280px] pb-20 flex flex-col justify-center items-center xl:flex-row xl:items-stretch gap-16 md:gap-16 bg-white">
         <Hours />
         <img
-          className="h-430 w-366 object-cover rounded-2xl shadow-xl"
+          className="h-[396px] w-[326px] md:h-430 md:w-[400px] md:h-[500px] md:w-[500px] xl:h-430 xl:w-[366px] object-cover rounded-2xl shadow-xl"
           src={cafeOwners}
           alt="Restaurant owners"
         />
         <img
-          className="h-430 w-366 object-cover rounded-2xl shadow-xl"
+          className="h-[396px] w-[326px] md:h-430 md:w-[400px] md:h-[500px] md:w-[500px] xl:h-430 xl:w-[366px] object-cover rounded-2xl shadow-xl"
           src={cafeEntrance}
           alt="Restaurant entrance"
         />
