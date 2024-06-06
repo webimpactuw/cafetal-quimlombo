@@ -6,7 +6,7 @@ const menu = {
     {
       item: "Beans and Cheese Burrito",
       description: "Fried pinto beans and cheese",
-      price: `<p>{menuInfo.menuInfo}</p>`,
+      price: 6.99,
     },
     {
       item: "Fried pinto beans and cheese",
