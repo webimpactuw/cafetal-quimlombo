@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { HashLink } from 'react-router-hash-link';
 import sanityClient from "../client.js";
 
 const menu = {
