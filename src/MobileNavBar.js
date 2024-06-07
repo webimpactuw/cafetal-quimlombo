@@ -17,7 +17,7 @@ function MobileNavbar() {
             <Link to="/" className="object-cover w-[42px] h-[42px]" onClick={(isOpen ? toggleMenu : "")}>
               <img src={cafeLogo} alt="logo"></img>
             </Link>
-            <Link to="/" className="text-2xl text-white" onClick={(isOpen ? toggleMenu : "")}>Cafetal Quilombo Cafe</Link>
+            <Link to="/" className="text-2xl text-white pr-4" onClick={(isOpen ? toggleMenu : "")}>Cafetal Quilombo Cafe</Link>
           </div>
           <div
             className="pr-[20px] py-[20px]"
