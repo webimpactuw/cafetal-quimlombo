@@ -11,36 +11,37 @@ function MobileNavbar() {
 
   return (
     <>
-      <div className="bg-red text-xl w-screen fixed z-50">
+      <div className="fixed z-50 w-full bg-red-primary text-xl text-white font-semibold">
+        {/* LOGO */}
         <div className="flex justify-between">
-          <div className=" pl-3 py-[20px] flex space-x-4 items-center">
+          <div className="px-4 py-4 flex items-center">
             <Link
               to="/"
-              className="object-cover w-[42px] h-[42px]"
+              className="w-8 h-8 object-cover"
               onClick={isOpen ? toggleMenu : ""}
             >
               <img src={cafeLogo} alt="logo"></img>
             </Link>
             <Link
               to="/"
-              className="text-2xl text-white pr-4"
+              className="text-lg md:text-2xl lg:text-3xl hover:text-beige transition"
               onClick={isOpen ? toggleMenu : ""}
             >
               Cafetal Quilombo Cafe
             </Link>
           </div>
-          <div className="pr-[20px] py-[20px]" onClick={toggleMenu}>
+
+          {/* ICON */}
+          <div className="flex items-center pr-4" onClick={toggleMenu}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="48"
-              height="48"
               viewBox="0 0 24 24"
               fill="none"
               stroke="#ffffff"
               stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
-              class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2"
+              class="w-10 h-10"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M4 6l16 0" />
@@ -49,14 +50,16 @@ function MobileNavbar() {
             </svg>
           </div>
         </div>
+
+        {/* LINKS */}
         <div
           className={
             (isOpen ? "h-screen" : "h-[0]") +
-            " flex justify-center " +
+            " flex justify-center text-center " +
             (isOpen ? "" : "invisible")
           }
         >
-          <div className="flex flex-col space-y-10 pt-11">
+          <div className="flex flex-col gap-10 pt-12">
             <Link to="/about" className="text-white" onClick={toggleMenu}>
               About Us
             </Link>

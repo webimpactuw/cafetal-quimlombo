@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { HashLink } from 'react-router-hash-link';
+// import { HashLink } from 'react-router-hash-link';
 import sanityClient from "../client.js";
 
 const menu = {
@@ -457,7 +457,7 @@ function Menu() {
       .catch(console.error);
   });
   return (
-    <div className="px-4 md:px-8 lg:px-12 xl:px-16 pt-32 pb-16 text-sm md:text-base lg:text-lg xl:text-xl bg-beige">
+    <div className="px-4 md:px-8 lg:px-12 xl:px-16 pt-24 md:pt-28 lg:pt-32 pb-16 text-sm md:text-base lg:text-lg xl:text-xl bg-beige">
       {/****** SIDEBAR ******/}
       <div className="hidden md:block fixed md:w-[18vw] lg:w-[15vw] h-[70vh] pb-20 border-r-4 border-red-primary overflow-y-scroll">
         {/* MENU CATEGORIES */}
