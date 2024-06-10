@@ -14,8 +14,12 @@ function App() {
     <div className="App text-gray-primary">
       <Router>
         <ScrollToTop />
-        <Navbar />
-        {/* <MobileNavbar /> */}
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
+        <div className="block md:hidden">
+          <MobileNavbar />
+        </div>
         <div>
           <Routes>
             <Route path="/" element={<Home />}></Route>
