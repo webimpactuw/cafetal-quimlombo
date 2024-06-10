@@ -1,21 +1,43 @@
 import { Link } from "react-router-dom";
-
+import { useState, useEffect } from "react";
 import flowerBorderLeft from "../images/flower-border-left.png";
 import flowerBorderRight from "../images/flower-border-right.png";
-import cafeOwners from "../images/cafe-owners.jpg";
-import cafeEntrance from "../images/cafe-entrance.png";
-
+import client from "../sanityClient.js";
 import Hours from "../components/Hours.js";
 
 function Home() {
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "homePage"][0]{
+      textBox,
+      image1{asset->{url}},
+      image2{asset->{url}},
+      image3{asset->{url}},
+      image4{asset->{url}},
+      image5{asset->{url}}
+    }`
+      )
+      .then((data) => setContent(data))
+      .catch((err) => console.error("Sanity fetch error: ", err));
+  }, []);
+
+  if (!content) return <div>Loading...</div>;
+
   return (
     <div className="pt-[82px]">
       {/* HERO */}
-      <div className="h-[173px] w-auto bg-[url('/public/bg-images/home-hero.jpeg')] bg-center bg-cover border-b-[6px] border-red-dark
-      md:h-371"></div>
+      <div
+        className="h-[173px] w-auto bg-[url('/public/bg-images/home-hero.jpeg')] bg-center bg-cover border-b-[6px] border-red-dark
+      md:h-371"
+      ></div>
       <div className="absolute translate-x-1/8 translate-y-[-80px] md:translate-y-[-60px] xl:translate-y-[-49px] w-full flex flex-row justify-center">
-        <p className="h-[160px] w-[320px] flex items-center bg-beige text-xl text-gray-primary font-medium text-center rounded-2xl border-[6px] border-red-dark text-[16px] leading-[18.6px]
-        md:px-8 md:h-[120px] md:w-[600px] md:text-lg xl:px-8 xl:h-94 xl:w-786 xl:text-xl">
+        <p
+          className="h-[160px] w-[320px] flex items-center bg-beige text-xl text-gray-primary font-medium text-center rounded-2xl border-[6px] border-red-dark text-[16px] leading-[18.6px]
+        md:px-8 md:h-[120px] md:w-[600px] md:text-lg xl:px-8 xl:h-94 xl:w-786 xl:text-xl"
+        >
           Located in South Seattle, Cafetal Quilombo Café is a unique restaurant
           offering authentic Mexican tacos in combination with Seattle’s iconic
           coffee.
@@ -29,7 +51,8 @@ function Home() {
           <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-tamales.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
             <Link
               to="/menu"
-              className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500 xl:w-80 xl:h-64">
+              className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500 xl:w-80 xl:h-64"
+            >
               <p className="xl:invisible xl:group-hover:visible text-[white] xl:duration-100 text-3xl">
                 Tamales
               </p>
@@ -67,9 +90,9 @@ function Home() {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             >
               <path stroke="none" d="M0 0h24v24H0z" fill="none" />
               <path d="M9 6l6 6l-6 6" />
@@ -80,8 +103,16 @@ function Home() {
 
       {/* FLOWERS */}
       <div className="mx-auto xl:px-8 xl:py-20 xl:flex xl:justify-between justify-center bg-white pt-[40px] max-w-[1300px]">
-        <img className="w-0 h-0 xl:h-147 xl:w-562" src={flowerBorderLeft} alt="" />
-        <img className="w-0 h-0 xl:h-147 xl:w-562" src={flowerBorderRight} alt="" />
+        <img
+          className="w-0 h-0 xl:h-147 xl:w-562"
+          src={flowerBorderLeft}
+          alt=""
+        />
+        <img
+          className="w-0 h-0 xl:h-147 xl:w-562"
+          src={flowerBorderRight}
+          alt=""
+        />
       </div>
 
       {/* HOURS */}

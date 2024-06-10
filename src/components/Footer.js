@@ -1,13 +1,13 @@
 function Footer() {
   return (
-    <div className="px-4 flex justify-between items-center bg-red-primary text-white">
+    <div className="relative px-5 md:px-10 py-5 flex justify-between items-center bg-red-primary text-white z-50">
       {/* COPYRIGHT */}
-      <p className="text-lg flex items-center px-8 p-4">
+      <p className="text-sm lg:text-lg flex items-center">
         &copy; 2024 Cafetal Quilombo Café
       </p>
 
       {/* SOCIAL MEDIA */}
-      <div className="px-8 py-4 flex flex-row gap-4">
+      <div className="flex flex-row md:gap-4">
         {/* FACEBOOK */}
         <a
           href="https://www.facebook.com/cafetalquilombo/"
@@ -16,15 +16,13 @@ function Footer() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="hover:text-beige transition"
+            className="w-8 h-8 lg:w-12 lg:h-12 hover:text-beige transition"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3" />
@@ -39,15 +37,13 @@ function Footer() {
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="48"
-            height="48"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            className="hover:text-beige transition"
+            className="w-8 h-8 lg:w-12 lg:h-12 hover:text-beige transition"
           >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" />

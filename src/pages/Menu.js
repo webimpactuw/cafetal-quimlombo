@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// import { HashLink } from 'react-router-hash-link';
 import sanityClient from "../client.js";
 
 const menu = {
@@ -6,7 +7,7 @@ const menu = {
     {
       item: "Beans and Cheese Burrito",
       description: "Fried pinto beans and cheese",
-      price: `<p>{menuInfo.menuInfo}</p>`,
+      price: 6.99,
     },
     {
       item: "Fried pinto beans and cheese",
@@ -423,11 +424,11 @@ const menuItemStyles = {
   Lunch: "grid-cols-1",
   Starters: "grid-cols-1",
   "Filling Options": "grid-cols-1",
-  Extras: "grid-cols-3",
-  Sides: "grid-cols-3",
-  Coffee: "grid-cols-3",
-  "Specialty Drinks": "grid-cols-3",
-  "Aguas Frescas": "grid-cols-3",
+  Extras: "grid-cols-2 md:grid-cols-3",
+  Sides: "grid-cols-2 md:grid-cols-3",
+  Coffee: "grid-cols-2 md:grid-cols-3",
+  "Specialty Drinks": "grid-cols-2 md:grid-cols-3",
+  "Aguas Frescas": "grid-cols-2 md:grid-cols-3",
 };
 
 const categories = {
@@ -456,9 +457,9 @@ function Menu() {
       .catch(console.error);
   });
   return (
-    <div className="px-16 py-16 pt-32 text-xl bg-beige">
+    <div className="px-4 md:px-8 lg:px-12 xl:px-16 pt-24 md:pt-28 lg:pt-32 pb-16 text-sm md:text-base lg:text-lg xl:text-xl bg-beige">
       {/****** SIDEBAR ******/}
-      <div className="fixed w-[15vw] h-[70vh] border-r-4 border-red-primary">
+      <div className="hidden md:block fixed md:w-[18vw] lg:w-[15vw] h-[70vh] pb-20 border-r-4 border-red-primary overflow-y-scroll">
         {/* MENU CATEGORIES */}
         <div className="flex flex-col gap-8">
           {Object.entries(categories).map(function ([category, items]) {
@@ -475,7 +476,7 @@ function Menu() {
       </div>
 
       {/****** MENU ******/}
-      <div className="relative ml-[20vw]">
+      <div className="relative md:ml-[23vw] lg:ml-[20vw]">
         <div className="flex flex-col gap-12">
           {Object.entries(menu).map(function ([category, items]) {
             return (
@@ -508,7 +509,7 @@ function Menu() {
 // ***** GENERAL COMPONENTS *****
 function Header({ text }) {
   return (
-    <h3 id={getID(text)} className="text-4xl font-bold">
+    <h3 id={getID(text)} className="text-xl md:text-2xl xl:text-3xl font-bold">
       {text}
     </h3>
   );
@@ -532,7 +533,7 @@ function MenuItem({ name, description, price, multiItemPerLine, subitems }) {
     "p-3 pt-4 border-b-2 border-gray-tertiary border-dashed " +
     (multiItemPerLine
       ? ""
-      : "flex flex-row justify-between items-center gap-12");
+      : "flex flex-row justify-between items-center gap-8 md:gap-12");
 
   return (
     <>
@@ -552,7 +553,7 @@ function MenuItem({ name, description, price, multiItemPerLine, subitems }) {
       </div>
       {subitems &&
         subitems.map(({ item, description, color }) => (
-          <div className="flex flex-row items-center gap-4 ml-10 p-3 pt-4 border-b-2 border-gray-tertiary border-dashed">
+          <div className="flex flex-row items-center gap-4 ml-2 md:ml-10 p-3 pt-4 border-b-2 border-gray-tertiary border-dashed">
             <div className={`w-4 h-4 rounded-full ${color}`}></div>
             <div>
               <p className="font-semibold">{item}</p>

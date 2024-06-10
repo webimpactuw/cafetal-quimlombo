@@ -3,19 +3,22 @@ import cafeLogo from "../images/logo.png";
 
 function Navbar() {
   return (
-    <div className="fixed z-50 w-screen flex justify-between bg-red-primary text-xl text-white font-semibold">
+    <div className="fixed z-50 w-full flex justify-between bg-red-primary text-xl text-white font-semibold">
       {/* LOGO */}
-      <div className="px-[40px] py-[20px] flex gap-6 items-center">
-        <Link to="/" className="w-[42px] h-[42px] object-cover">
+      <div className="px-10 py-5 flex gap-2 lg:gap-4 items-center">
+        <Link to="/" className="w-8 h-8 lg:w-10 lg:h-10 object-cover">
           <img src={cafeLogo} alt="logo"></img>
         </Link>
-        <Link to="/" className="text-3xl hover:text-beige transition">
+        <Link
+          to="/"
+          className="text-2xl lg:text-3xl hover:text-beige transition"
+        >
           Cafetal Quilombo Café
         </Link>
       </div>
 
       {/* LINKS */}
-      <div className="px-[40px] py-[20px] flex gap-10 items-center">
+      <div className="px-10 py-5 flex gap-10 items-center text-sm md:text-base lg:text-lg xl:text-xl">
         <Link to="/about" className="hover:text-beige transition">
           About Us
         </Link>
