@@ -1,8 +1,8 @@
 import "./App.css";
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./scrollToTop.js";
-
-import Navbar from "./components/Navbar.js";
+import Navbar from "./Navbar.js";
+import MobileNavbar from './MobileNavBar.js';
 import Footer from "./components/Footer.js";
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App text-gray-primary">
       <Router>
-        <ScrollToTop />
-        <Navbar />
+        <ScrollToTop/>
+        <MobileNavbar />
         <div>
           <Routes>
             <Route path="/" element={<Home />}></Route>
