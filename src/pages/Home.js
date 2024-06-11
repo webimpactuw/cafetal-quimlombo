@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import cafeEntrance from "../images/cafe-entrance.png";
+import cafeOwners from "../images/cafe-owners.jpg";
 import flowerBorderLeft from "../images/flower-border-left.png";
 import flowerBorderRight from "../images/flower-border-right.png";
 import client from "../sanityClient.js";
@@ -27,16 +29,13 @@ function Home() {
   if (!content) return <div>Loading...</div>;
 
   return (
-    <div className="pt-[82px]">
+    <div className="pt-19 lg:pt-20">
       {/* HERO */}
-      <div
-        className="h-[173px] w-auto bg-[url('/public/bg-images/home-hero.jpeg')] bg-center bg-cover border-b-[6px] border-red-dark
-      md:h-371"
-      ></div>
-      <div className="absolute translate-x-1/8 translate-y-[-80px] md:translate-y-[-60px] xl:translate-y-[-49px] w-full flex flex-row justify-center">
+      <div className="h-371 bg-[url('/public/bg-images/home-hero.jpeg')] bg-center bg-cover border-b-[6px] border-red-dark"></div>
+      <div className="flex flex-row justify-center w-full pt-4 px-16 md:p-0 md:absolute md:translate-x-1/8 md:translate-y-[-60px] xl:translate-y-[-49px]">
         <p
-          className="h-[160px] w-[320px] flex items-center bg-beige text-xl text-gray-primary font-medium text-center rounded-2xl border-[6px] border-red-dark text-[16px] leading-[18.6px]
-        md:px-8 md:h-[120px] md:w-[600px] md:text-lg xl:px-8 xl:h-94 xl:w-786 xl:text-xl"
+          className="flex items-center bg-beige text-gray-primary text-xl md:text-lg xl:text-xl font-medium text-center rounded-2xl border-[6px] border-red-dark leading-8 md:leading-[18.6px]
+        p-4 md:px-8 md:h-[120px] md:w-[600px] xl:px-8 xl:h-94 xl:w-786"
         >
           Located in South Seattle, Cafetal Quilombo Café is a unique restaurant
           offering authentic Mexican tacos in combination with Seattle’s iconic
@@ -45,7 +44,7 @@ function Home() {
       </div>
 
       {/* FOOD */}
-      <div className=" mx-auto pt-32 flex flex-col justify-center items-center max-w-[1280px] px-8 md:px-16">
+      <div className=" mx-auto pt-16 md:pt-32 flex flex-col justify-center items-center max-w-[1280px] px-8 md:px-16">
         <h1 className="text-4xl font-bold">Food</h1>
         <div className="flex flex-col items-center gap-16 w-full py-2.5 xl:flex-row shrink">
           <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-tamales.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
