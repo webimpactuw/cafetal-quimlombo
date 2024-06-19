@@ -12,7 +12,7 @@ function Catering() {
   if (!content) return <div>Loading...</div>;
   
   return (
-    <div className="pt-[82px]">
+    <div className="pt-[80px]">
       {/* HERO */}
       <div className="h-[235px] bg-[url('/public/bg-images/catering-hero.png')] bg-center bg-cover border-b-[6px] border-red-dark">
         <div className="w-[980px] h-[186px] translate-y-[140px] mx-auto px-8 flex flex-col justify-center bg-beige border-red-dark border-[6px] rounded-2xl">
