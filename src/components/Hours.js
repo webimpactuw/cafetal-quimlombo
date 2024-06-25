@@ -143,7 +143,7 @@ function getOpenString() {
 
   if (openingTime < currentTime && currentTime < closingTime) {
     return (
-      <h3 className="mb-2 text-2xl font-bold">
+      <h3 className="mb-2 text-lg md:text-2xl font-bold">
         <span className="text-green-primary">Open</span> until{" "}
         {intToTime(closingTime.getHours())}
       </h3>

@@ -11,7 +11,7 @@ import Catering from "./pages/Catering.js";
 
 function App() {
   return (
-    <div className="App text-gray-primary">
+    <div className="App text-gray-primary text-sm md:text-base lg:text-lg xl:text-xl">
       <Router>
         <ScrollToTop />
         <div className="hidden md:block">

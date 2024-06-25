@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { HashLink } from 'react-router-hash-link';
+import { HashLink as Link } from "react-router-hash-link";
 import sanityClient from "../client.js";
 
 const menu = {
@@ -518,12 +518,13 @@ function Header({ text }) {
 // ***** SIDEBAR COMPONENTS *****
 function Category({ text }) {
   return (
-    <a
-      href={`#${getID(text)}`}
+    <Link
+      smooth
+      to={`/menu#${getID(text)}`}
       className="text-gray-secondary transition hover:text-red-primary"
     >
       {text}
-    </a>
+    </Link>
   );
 }
 
