@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import cafeQuill from "../images/cafe-quill.png";
 import Hours from "../components/Hours.js";
 import client from "../sanityClient.js";
 
@@ -16,53 +15,48 @@ function About() {
 
   if (!content) return <div>Loading...</div>;
   return (
-    <div className="pt-40">
-      {/* OUR SOTRY */}
-      <section className="mb-8 md:mb-24 max-w-[1300px] mx-auto">
-        {/* Flex container for image and text */}
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-4 lg:gap-16 px-8">
-          {/* Container for rounded image */}
-          <div className="md:w-2/5 lg:w-1/4 order-2 md:order-1 rounded-xl overflow-hidden">
-            {/* Image */}
-            <img
-              src={content.firstImage.asset.url}
-              alt="Cafe description of origins"
-            />
-          </div>
-          {/* Container for text */}
-          <div className="md:w-3/5 lg:w-3/4 order-1 md:order-2">
-            <div className="md:p-6 lg:p-8 md:bg-beige md:rounded-xl md:border-[6px] md:border-red-dark">
-              {/* Our Story title */}
-              <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-red-primary md:text-gray-primary">
-                Our Story
-              </h2>
-              {/* Text with serif font */}
-              <p className="leading-6">{content.ourStoryText}</p>
-            </div>
-          </div>
+    <div className="pt-24 md:pt-32">
+      {/* OUR STORY */}
+      <section className="mb-8 md:mb-24 max-w-[1300px] mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-4 lg:gap-16 px-8">
+        {/* Container for rounded image */}
+        <div className="md:w-2/5 lg:w-1/4 order-2 md:order-1 rounded-xl overflow-hidden">
+          {/* Image */}
+          <img
+            src={content.firstImage.asset.url}
+            alt="Cafe description of origins"
+            className="w-full"
+          />
+        </div>
+        {/* Container for text */}
+        <div className="md:w-3/5 lg:w-3/4 order-1 md:order-2 md:p-6 lg:p-8 md:bg-beige md:rounded-xl md:border-[6px] md:border-red-dark">
+          {/* Our Story title */}
+          <h2 className="text-3xl md:text-4xl font-bold mb-2 md:mb-4 text-red-primary md:text-gray-primary">
+            Our Story
+          </h2>
+          {/* Text with serif font */}
+          <p className="leading-6">{content.ourStoryText}</p>
         </div>
       </section>
 
       {/* LOCATION AND HOURS */}
-      <section className="text-white bg-red-primary">
-        <div className="max-w-[1300px] mx-auto pt-6 md:pt-12 pb-12 md:pb-24 px-8">
+      <section className="text-white bg-red-primary pt-6 md:pt-12 pb-12 md:pb-24 px-8">
+        <div className="max-w-[1300px] mx-auto">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Location and Hours
           </h2>
           {/* Divider with Google Map and Schedule */}
-          <div className="flex flex-col lg:flex-row gap-12 items-stretch">
+          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-stretch">
             {/* Google Map */}
             <iframe
               title="Google Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2692.1899359858166!2d-122.31626922343985!3d47.56409279091152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549041d9e9ab7363%3A0x4042c931a153902b!2sCafetal%20Quilombo%20Cafe!5e0!3m2!1sen!2sus!4v1715116586151!5m2!1sen!2sus"
               width="100%"
-              height="300"
               allowFullScreen=""
               loading="lazy"
-              className="rounded-xl"
+              className="rounded-xl h-[300px] md:h-auto"
             ></iframe>
             {/* Schedule */}
-            <div>
+            <div className="w-full md:w-[600px]">
               <Hours displayContact={false} />
             </div>
           </div>
