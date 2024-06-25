@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import cafeQuill from "../images/cafe-quill.png";
 import Hours from "../components/Hours.js";
+import client from "../sanityClient.js";
 
 function About() {
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    client
+      .fetch(
+        `*[_type == "aboutUsPage"][0]{ourStoryText, firstImage{asset->{url}}}`
+      )
+      .then((data) => setContent(data));
+  }, []);
+
+  if (!content) return <div>Loading...</div>;
   return (
     <div className="pt-40">
       {/* OUR SOTRY */}
@@ -12,7 +24,10 @@ function About() {
           {/* Container for rounded image */}
           <div className="md:w-2/5 lg:w-1/4 order-2 md:order-1 rounded-xl overflow-hidden">
             {/* Image */}
-            <img src={cafeQuill} alt="Cafe description of origins" />
+            <img
+              src={content.firstImage.asset.url}
+              alt="Cafe description of origins"
+            />
           </div>
           {/* Container for text */}
           <div className="md:w-3/5 lg:w-3/4 order-1 md:order-2">
@@ -22,13 +37,7 @@ function About() {
                 Our Story
               </h2>
               {/* Text with serif font */}
-              <p className="leading-6">
-                Historically, a quilombo was a refuge in Brazil, offering
-                shelter and safety. From this meaning, the owners decided to
-                name their coffee shop after this. Cafetal Quilombo Café is
-                meant to be a community open to everyone, a place to relax, be
-                present, and enjoy some great coffee.
-              </p>
+              <p className="leading-6">{content.ourStoryText}</p>
             </div>
           </div>
         </div>

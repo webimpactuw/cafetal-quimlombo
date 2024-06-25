@@ -1,8 +1,8 @@
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./scrollToTop.js";
-
 import Navbar from "./components/Navbar.js";
+import MobileNavbar from "./components/Navbar--Mobile.js";
 import Footer from "./components/Footer.js";
 import Home from "./pages/Home.js";
 import About from "./pages/About.js";
@@ -14,7 +14,12 @@ function App() {
     <div className="App text-gray-primary text-sm md:text-base lg:text-lg xl:text-xl">
       <Router>
         <ScrollToTop />
-        <Navbar />
+        <div className="hidden md:block">
+          <Navbar />
+        </div>
+        <div className="block md:hidden">
+          <MobileNavbar />
+        </div>
         <div>
           <Routes>
             <Route path="/" element={<Home />}></Route>

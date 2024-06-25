@@ -1,17 +1,24 @@
 import Form from "../components/Form.js";
+import { useEffect, useState } from "react";
+import client from "../sanityClient.js";
 
 function Catering() {
+  const [content, setContent] = useState(null);
+
+  useEffect(() => {
+    client.fetch(`*[_type == "cateringPage"][0]`).then(data => setContent(data));
+  }, []);
+
+  if (!content) return <div>Loading...</div>;
+  
   return (
-    <div className="pt-[82px]">
+    <div className="pt-[80px]">
       {/* HERO */}
       <div className="h-[235px] bg-[url('/public/bg-images/catering-hero.png')] bg-center bg-cover border-b-[6px] border-red-dark">
         <div className="w-[980px] h-[186px] translate-y-[140px] mx-auto px-8 flex flex-col justify-center bg-beige border-red-dark border-[6px] rounded-2xl">
           <h1 className="mb-2 text-4xl font-bold text-center">Catering</h1>
           <p className="text-xl leading-6 text-center">
-            Looking to serve a large group? We can cater large orders of your
-            favorite dishes, complete with delicious sides. Our typical requests
-            are for tamales, tacos, or enchiladas, but if there's something else
-            you're interested in, we're happy to accommodate!{" "}
+          {content.cateringText}
           </p>
         </div>
       </div>
