@@ -13,7 +13,7 @@ function Form() {
     e.preventDefault();
 
     emailjs
-      .sendForm("service_b7ilofc", "template_r8c75gq", form.current, {
+      .sendForm("service_f4a78wf", "template_r8c75gq", form.current, {
         publicKey: "k9C-CL7rMTM_jR-lI",
       })
       .then(

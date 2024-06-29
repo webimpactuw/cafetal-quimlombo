@@ -31,7 +31,7 @@ const hours = {
 
 function Hours({ displayContact = true }) {
   return (
-    <div className="px-6 bg-[white] py-3 w-[400px] rounded-2xl shadow-lg text-gray-primary">
+    <div className="px-6 bg-[white] py-3 rounded-2xl shadow-lg text-gray-primary">
       {getOpenString()}
 
       <div
@@ -41,7 +41,7 @@ function Hours({ displayContact = true }) {
       >
         {Object.entries(hours).map(function ([dayOfTheWeek, { open, close }]) {
           return (
-            <div className="relative flex justify-between">
+            <div className="relative flex justify-between gap-2">
               {getDayOfWeek() === dayOfTheWeek && (
                 <div className="absolute h-[100%] w-1 left-[-10px] border-l-4 border-red-primary rounded-sm"></div>
               )}
@@ -143,7 +143,7 @@ function getOpenString() {
 
   if (openingTime < currentTime && currentTime < closingTime) {
     return (
-      <h3 className="mb-2 text-2xl font-bold">
+      <h3 className="mb-2 text-lg md:text-2xl font-bold">
         <span className="text-green-primary">Open</span> until{" "}
         {intToTime(closingTime.getHours())}
       </h3>
