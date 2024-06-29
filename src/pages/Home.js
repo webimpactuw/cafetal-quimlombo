@@ -51,9 +51,9 @@ function Home() {
             <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-tamales.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
               <Link
                 to="/menu"
-                className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
+                className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 lg:bg-opacity-0 lg:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
               >
-                <p className="xl:invisible xl:group-hover:visible text-[white] xl:duration-100 text-3xl">
+                <p className="lg:invisible lg:group-hover:visible text-[white] lg:duration-100 text-3xl">
                   Tamales
                 </p>
               </Link>
@@ -61,9 +61,9 @@ function Home() {
             <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-tacos.png')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
               <Link
                 to="/menu"
-                className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
+                className="h-[120px] w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 lg:bg-opacity-0 lg:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
               >
-                <p className="xl:invisible xl:group-hover:visible text-[white] xl:duration-100 text-3xl">
+                <p className="lg:invisible lg:group-hover:visible text-[white] lg:duration-100 text-3xl">
                   Tacos
                 </p>
               </Link>
@@ -71,9 +71,9 @@ function Home() {
             <div className="group h-[120px] w-full md:h-[160px] bg-[url('/public/bg-images/menu-enchiladas.webp')] bg-center bg-cover hover:bg-opacity-60 rounded-3xl cursor-pointer xl:w-80 xl:h-64">
               <Link
                 to="/menu"
-                className="h-[120px] :w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 xl:bg-opacity-0 xl:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
+                className="h-[120px] :w-full md:h-[160px] rounded-3xl bg-[black] bg-opacity-40 lg:bg-opacity-0 lg:hover:bg-opacity-60 flex flex-row justify-center items-center duration-500"
               >
-                <p className="xl:invisible xl:group-hover:visible text-[white] xl:duration-100 text-3xl">
+                <p className="lg:invisible lg:group-hover:visible text-[white] lg:duration-100 text-3xl">
                   Enchilatas
                 </p>
               </Link>
@@ -116,15 +116,15 @@ function Home() {
         </div>
 
         {/* HOURS */}
-        <div className="mx-auto max-w-[1280px] mb-20 grid lg:grid-cols-3 gap-8 md:gap-12 bg-white">
+        <div className="mx-auto max-w-[1280px] mb-20 grid items-stretch lg:grid-cols-3 gap-8 bg-white">
           <Hours />
           <img
-            className="w-full h-[500px] lg:h-[400px] object-cover rounded-2xl shadow-xl"
+            className="w-full h-[450px] object-cover rounded-2xl shadow-xl"
             src={cafeOwners}
             alt="Restaurant owners"
           />
           <img
-            className="w-full h-[500px] lg:h-[400px] object-cover rounded-2xl shadow-xl"
+            className="w-full h-[450px] object-cover rounded-2xl shadow-xl"
             src={cafeEntrance}
             alt="Restaurant entrance"
           />
