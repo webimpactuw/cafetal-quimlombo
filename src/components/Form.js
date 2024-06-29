@@ -32,10 +32,10 @@ function Form() {
   };
 
   return (
-    <form ref={form} onSubmit={sendEmail}>
-      <div className="flex flex-row justify-between">
+    <form ref={form} onSubmit={sendEmail} className="flex-col">
+      <div className="flex flex-col px-8 lg:flex-row justify-between gap-10 items-center">
         {/* NAME */}
-        <div className="w-[345px] h-[43px] flex items-center border-gray-primary border-2 rounded-lg">
+        <div className="w-[100%] lg:w-[345px] h-[43px] flex items-center border-gray-primary border-2 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -64,7 +64,7 @@ function Form() {
         </div>
 
         {/* PHONE NUMBER */}
-        <div className="w-[345px] h-[43px] flex items-center border-gray-primary border-2 rounded-lg">
+        <div className="w-[100%] lg:w-[345px] h-[43px] flex items-center border-gray-primary border-2 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -92,7 +92,7 @@ function Form() {
         </div>
 
         {/* EMAIL */}
-        <div className="w-[345px] h-[43px] flex items-center border-gray-primary border-2 rounded-lg">
+        <div className="w-[100%] lg:w-[345px] h-[43px] flex items-center border-gray-primary border-2 rounded-lg">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -122,21 +122,23 @@ function Form() {
       </div>
 
       {/* MESSAGE */}
-      <div className="mt-12 mb-2 text-xl font-semibold">
+      <div className="px-8 mt-8 lg:mt-12 mb-2 text-xl font-semibold">
         How can we help you?
       </div>
-      <textarea
-        placeholder="Include the kind of food, quantity, desired date, and time."
-        className="w-[100%] h-[162px] px-2.5 py-1 border-2 border-gray-primary rounded-lg"
-        value={message}
-        id="userMessage"
-        name="senderMessage"
-        onChange={(e) => setMessage(e.target.value)}
-      ></textarea>
-      <div className="flex justify-end">
+      <div className="text-center px-8">
+        <textarea
+          placeholder="Include the kind of food, quantity, desired date, and time."
+          className="w-[100%] lg:w-[100%] h-[162px] px-2.5 py-1 border-2 border-gray-primary rounded-lg"
+          value={message}
+          id="userMessage"
+          name="senderMessage"
+          onChange={(e) => setMessage(e.target.value)}
+        ></textarea>
+      </div>
+      <div className="flex justify-center lg:justify-end">
         <button
           type="submit"
-          className="pt-12 flex justify-end"
+          className="pb-8 px-8  pt-12 flex justify-end"
           disabled={!name || !email || !message}
         >
           <div className="w-[200px] h-[50px] flex flex-col justify-center text-lg font-semibold text-white bg-red-primary hover:bg-red-dark cursor-pointer transition rounded-xl ">
