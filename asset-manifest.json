@@ -1,29 +1,28 @@
 {
   "files": {
-    "main.css": "/cafetal-quilombo/static/css/main.b8cc2f3e.css",
-    "main.js": "/cafetal-quilombo/static/js/main.5bf99cc8.js",
-    "static/js/796.59c7b74a.chunk.js": "/cafetal-quilombo/static/js/796.59c7b74a.chunk.js",
-    "static/js/165.3fb1bfdb.chunk.js": "/cafetal-quilombo/static/js/165.3fb1bfdb.chunk.js",
-    "static/js/453.a4775238.chunk.js": "/cafetal-quilombo/static/js/453.a4775238.chunk.js",
-    "static/media/cafe-owners.jpg": "/cafetal-quilombo/static/media/cafe-owners.34a0ee305ab5391f288e.jpg",
-    "static/media/cafe-quill.png": "/cafetal-quilombo/static/media/cafe-quill.b4cfa59666eb23b2a838.png",
-    "static/media/menu-tacos.png": "/cafetal-quilombo/static/media/menu-tacos.bda30223b858442271ed.png",
-    "static/media/home-hero.jpeg": "/cafetal-quilombo/static/media/home-hero.2b69ac69618b6f7ac576.jpeg",
-    "static/media/catering-hero.png": "/cafetal-quilombo/static/media/catering-hero.fa51fa66e7931247b5ac.png",
-    "static/media/cafe-entrance.png": "/cafetal-quilombo/static/media/cafe-entrance.f14c52849badb97ce632.png",
-    "static/media/flower-border-left.png": "/cafetal-quilombo/static/media/flower-border-left.6d51ed6dfa29716d1fcb.png",
-    "static/media/menu-enchiladas.webp": "/cafetal-quilombo/static/media/menu-enchiladas.92f1275971223576d890.webp",
-    "static/media/flower-border-right.png": "/cafetal-quilombo/static/media/flower-border-right.451e1f9ed520e2e5e2f7.png",
-    "static/media/menu-tamales.webp": "/cafetal-quilombo/static/media/menu-tamales.b04af533a6b7ffc9e114.webp",
-    "index.html": "/cafetal-quilombo/index.html",
-    "main.b8cc2f3e.css.map": "/cafetal-quilombo/static/css/main.b8cc2f3e.css.map",
-    "main.5bf99cc8.js.map": "/cafetal-quilombo/static/js/main.5bf99cc8.js.map",
-    "796.59c7b74a.chunk.js.map": "/cafetal-quilombo/static/js/796.59c7b74a.chunk.js.map",
-    "165.3fb1bfdb.chunk.js.map": "/cafetal-quilombo/static/js/165.3fb1bfdb.chunk.js.map",
-    "453.a4775238.chunk.js.map": "/cafetal-quilombo/static/js/453.a4775238.chunk.js.map"
+    "main.css": "/static/css/main.0eb39383.css",
+    "main.js": "/static/js/main.1775669a.js",
+    "static/js/796.59c7b74a.chunk.js": "/static/js/796.59c7b74a.chunk.js",
+    "static/js/165.3fb1bfdb.chunk.js": "/static/js/165.3fb1bfdb.chunk.js",
+    "static/js/453.a4775238.chunk.js": "/static/js/453.a4775238.chunk.js",
+    "static/media/cafe-owners.jpg": "/static/media/cafe-owners.34a0ee305ab5391f288e.jpg",
+    "static/media/menu-tacos.png": "/static/media/menu-tacos.bda30223b858442271ed.png",
+    "static/media/home-hero.jpeg": "/static/media/home-hero.2b69ac69618b6f7ac576.jpeg",
+    "static/media/catering-hero.png": "/static/media/catering-hero.06880394f7b4dad499bc.png",
+    "static/media/cafe-entrance.png": "/static/media/cafe-entrance.f14c52849badb97ce632.png",
+    "static/media/flower-border-left.png": "/static/media/flower-border-left.6d51ed6dfa29716d1fcb.png",
+    "static/media/menu-enchiladas.webp": "/static/media/menu-enchiladas.92f1275971223576d890.webp",
+    "static/media/flower-border-right.png": "/static/media/flower-border-right.451e1f9ed520e2e5e2f7.png",
+    "static/media/menu-tamales.webp": "/static/media/menu-tamales.b04af533a6b7ffc9e114.webp",
+    "index.html": "/index.html",
+    "main.0eb39383.css.map": "/static/css/main.0eb39383.css.map",
+    "main.1775669a.js.map": "/static/js/main.1775669a.js.map",
+    "796.59c7b74a.chunk.js.map": "/static/js/796.59c7b74a.chunk.js.map",
+    "165.3fb1bfdb.chunk.js.map": "/static/js/165.3fb1bfdb.chunk.js.map",
+    "453.a4775238.chunk.js.map": "/static/js/453.a4775238.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b8cc2f3e.css",
-    "static/js/main.5bf99cc8.js"
+    "static/css/main.0eb39383.css",
+    "static/js/main.1775669a.js"
   ]
 }
