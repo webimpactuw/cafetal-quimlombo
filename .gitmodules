@@ -1,0 +1,3 @@
+[submodule "cafetal-sanity"]
+	path = cafetal-sanity
+	url = https://github.com/AbdulSalamAbro/cafetal-sanity/
