@@ -22,10 +22,10 @@ function App() {
         </div>
         <div>
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/about" element={<About />}></Route>
-            <Route path="/menu" element={<Menu />}></Route>
-            <Route path="/catering" element={<Catering />}></Route>
+            <Route path="/" exact element={<Home />}></Route>
+            <Route path="/about" exact element={<About />}></Route>
+            <Route path="/menu" exact element={<Menu />}></Route>
+            <Route path="/catering" exact element={<Catering />}></Route>
           </Routes>
         </div>
       </Router>
